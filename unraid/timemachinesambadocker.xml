@@ -58,16 +58,6 @@
   <Icon></Icon>
 
   <Network Default="bridge">bridge</Network>
-
-  <Config Type="Port" Name="Samba port" Target="445" Default="9445" Mode="tcp" Display="advanced-hide" Required="true"
-       Description="Samba port">9445</Config>
-
-  <Config Type="Port" Name="Samba port alt" Target="139" Default="9139" Mode="tcp" Display="advanced-hide" Required="true"
-       Description="Samba port">9139</Config>
-
-  <Config Type="Port" Name="Samba port udp" Target="137" Default="3137" Mode="udp" Display="advanced-hide" Required="true"
-       Description="Samba port">3137</Config>
-
   <Config Type="Path" Name="Config Storage Path" Target="/config" Default="/mnt/user/appdata/TimemachineSamba" Mode="rw" Display="advanced-hide" Required="true"
        Description="Configuration storage as needed">/mnt/user/appdata/TimemachineSamba</Config>
 
