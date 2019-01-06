@@ -38,6 +38,14 @@
       <Name>TM_USER</Name>
       <Value>timemachine</Value>
     </Variable>
+    <Variable>
+      <Name>TM_UID</Name>
+      <Value>1001</Value>
+    </Variable>
+    <Variable>
+      <Name>TM_GID</Name>
+      <Value>100</Value>
+    </Variable>
 </Environment>
   <Networking>
     <Mode>bridge</Mode>
