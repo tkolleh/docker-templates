@@ -26,12 +26,12 @@
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8139</HostPort>
+        <HostPort>9139</HostPort>
         <ContainerPort>139</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>8445</HostPort>
+        <HostPort>9445</HostPort>
         <ContainerPort>445</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -59,11 +59,11 @@
 
   <Network Default="bridge">bridge</Network>
 
-  <Config Type="Port" Name="Samba port" Target="445" Default="8445" Mode="tcp" Display="advanced-hide" Required="true"
-       Description="Samba port">8445</Config>
+  <Config Type="Port" Name="Samba port" Target="445" Default="9445" Mode="tcp" Display="advanced-hide" Required="true"
+       Description="Samba port">9445</Config>
 
-  <Config Type="Port" Name="Samba port alt" Target="139" Default="8139" Mode="tcp" Display="advanced-hide" Required="true"
-       Description="Samba port">8139</Config>
+  <Config Type="Port" Name="Samba port alt" Target="139" Default="9139" Mode="tcp" Display="advanced-hide" Required="true"
+       Description="Samba port">9139</Config>
 
   <Config Type="Port" Name="Samba port udp" Target="137" Default="3137" Mode="udp" Display="advanced-hide" Required="true"
        Description="Samba port">3137</Config>
