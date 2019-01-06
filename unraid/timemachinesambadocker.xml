@@ -38,7 +38,7 @@
       <Name>TM_USER</Name>
       <Value>timemachime</Value>
     </Variable>
-  <Environment/>
+</Environment>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
