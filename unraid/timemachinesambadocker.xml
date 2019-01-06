@@ -3,7 +3,7 @@
   <Date>2019-1-5</Date>
   <Beta>True</Beta>
   <Category>Backup:Timemachine Backup:macos</Category>
-  <Name>PlexMediaServer</Name>
+  <Name>TimeMachineSamba</Name>
   <Project>https://www.reddit.com/r/homelab/comments/83vkaz/howto_make_time_machine_backups_on_a_samba/</Project>
   <Changes>
 [font size=3]2015.06.15[/font]
