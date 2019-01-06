@@ -3,7 +3,7 @@
   <Date>2019-1-5</Date>
   <Beta>True</Beta>
   <Category>Backup:Timemachine Backup:macos</Category>
-  <Name>TimeMachineSamba</Name>
+  <Name>TimemachineSamba</Name>
   <Project>https://www.reddit.com/r/homelab/comments/83vkaz/howto_make_time_machine_backups_on_a_samba/</Project>
   <Changes>
 [font size=3]2015.06.15[/font]
@@ -20,20 +20,57 @@
   <Repository>unraid/timemachinesamba</Repository>
   <Support></Support>
   <BindTime>true</BindTime>
-  <Privileged>true</Privileged>
-  <Networking>
-    <Mode>host</Mode>
-    <Publish/>
-  </Networking>
+  <Privileged>false</Privileged>
   <Environment/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8139</HostPort>
+        <ContainerPort>139</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8445</HostPort>
+        <ContainerPort>445</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3137</HostPort>
+        <ContainerPort>137</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/appdata/timemachinesamba</HostDir>
+      <HostDir>/mnt/user/appdata/TimemachineSamba</HostDir>
       <ContainerDir>/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/macos-backups</HostDir>
+      <ContainerDir>/timemachine</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <WebUI></WebUI>
-  <Banner></Banner>
   <Icon></Icon>
+
+  <Network Default="bridge">bridge</Network>
+
+  <Config Type="Port" Name="Samba port" Target="445" Default="8445" Mode="tcp" Display="advanced-hide" Required="true"
+       Description="Samba port">8445</Config>
+
+  <Config Type="Port" Name="Samba port alt" Target="139" Default="8139" Mode="tcp" Display="advanced-hide" Required="true"
+       Description="Samba port">8139</Config>
+
+  <Config Type="Port" Name="Samba port udp" Target="137" Default="3137" Mode="udp" Display="advanced-hide" Required="true"
+       Description="Samba port">3137</Config>
+
+  <Config Type="Path" Name="Config Storage Path" Target="/config" Default="/mnt/user/appdata/TimemachineSamba" Mode="rw" Display="advanced-hide" Required="true"
+       Description="Configuration storage as needed">/mnt/user/appdata/TimemachineSamba</Config>
+
+   <Config Type="Path" Name="Timemachine storage path" Target="/timemachine" Default="/mnt/user/macos-backups" Mode="rw" Display="advanced-hide" Required="true"
+       Description="Configuration storage as needed">/mnt/user/macos-backups</Config>
 </Containers>
