@@ -22,6 +22,22 @@
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Environment/>
+    <Variable>
+      <Name>TM_SIZE</Name>
+      <Value>512000</Value>
+    </Variable>
+    <Variable>
+      <Name>TM_PWD</Name>
+      <Value>timemachine</Value>
+    </Variable>
+    <Variable>
+      <Name>TM_GROUP</Name>
+      <Value>users</Value>
+    </Variable>
+    <Variable>
+      <Name>TM_USER</Name>
+      <Value>timemachime</Value>
+    </Variable>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
