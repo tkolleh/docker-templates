@@ -21,7 +21,7 @@
   <Support></Support>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
-  <Environment/>
+  <Environment>
     <Variable>
       <Name>TM_SIZE</Name>
       <Value>512000</Value>
@@ -38,6 +38,7 @@
       <Name>TM_USER</Name>
       <Value>timemachime</Value>
     </Variable>
+  <Environment/>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
